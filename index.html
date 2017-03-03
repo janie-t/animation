@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="./node_modules/animejs/anime.min.js"></script>
+
+</head>
+<body>
+
+<h1>Korero Mai Reward Animation</h1>
+<p>
+  <button onclick='birdMove()'>Tau ke!</button>
+</p>
+<div id ='container'>
+    <div id ='animate'>
+    </div>
+</div>
+
+<script>
+function birdMove() {
+  var elem = document.getElementById('animate');
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  var audio = new Audio('bird.mp3');
+  function frame() {
+    if (pos == 250) {
+      clearInterval(id);
+      var div = document.createElement('div');
+      document.body.appendChild(div);
+      div.style.left = pos;
+      div.style.top = pos;
+      div.className = 'newBird';
+      div.innerHTML = "<img src='bird.png' />";
+    } else {
+      audio.play()
+      pos++;
+      elem.style.top = pos + 'px';
+      elem.style.left = pos + 'px';
+    }
+  }
+}
+</script>
+</body>
+</html>

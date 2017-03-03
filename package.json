@@ -1,0 +1,14 @@
+{
+  "name": "animationpractice",
+  "version": "1.0.0",
+  "description": "a reward system protoype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animejs": "^2.0.1"
+  }
+}
